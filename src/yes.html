@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>~GoOd ViBeS~</title>
+
+	<link rel="stylesheet" media="screen" href="styles.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Random complement server">
+</head>
+
+<body>
+<div class="page-wrapper">
+
+	<section class="intro" id="complement-intro">
+		<header role="banner">
+      <h3>~GoOd ViBeS~</h3>
+      <h2>Good morning <abbr title="Mister">Mr.</abbr> Sunshine</h2>
+			<h1>You are BEAUTIFUL!</h1>
+		</header>
+
+		<div class="messages" id="user-messages" role="main">
+      <form action="localhost:8081" method="post">
+        <p>Want to send a <abbr title="only POSITIVE messages, bitches">message</abbr>?</p>
+        <input type="text" name="comment"><br><br>
+        <input id="btnSubmit" type="button" value="Submit" onserverclick="SaveMethod()" runat="server"/>
+      </form>
+
+		</div>
+	</section>
+</body>
+</html>
