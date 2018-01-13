@@ -6,8 +6,8 @@ var app = express();
 
 app.get('/', (req, res) => {
 	DB.getComplement().then((doc) => {
-		res.send(doc);
-	})
+		res.send(doc[Math.floor(Math.random()*doc.length)]);
+	});
 });
 
 app.post('/', (req, res) => {
@@ -15,5 +15,5 @@ app.post('/', (req, res) => {
 });
 
 app.listen(8081, () => {
-  console.log("Listening now on port 8080!");
+  console.log("Listening now on port 8081!");
 });
