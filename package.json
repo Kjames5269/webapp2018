@@ -1,0 +1,32 @@
+{
+  "name": "webapp2018",
+  "version": "1.0.0",
+  "description": "This shit is dumb",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "babel src --out-dir lib && node lib/index.js",
+    "start": "node lib/index.js",
+    "compile": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kjames5269/webapp2018.git"
+  },
+  "author": "The hackathon goons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kjames5269/webapp2018/issues"
+  },
+  "homepage": "https://github.com/Kjames5269/webapp2018#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
