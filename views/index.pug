@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title ~GoOd ViBeS~
+    link(rel='stylesheet', media='screen', href='styles.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Random complement server')
+  body
+    .page-wrapper
+      section#complement-intro.intro
+        header(role='banner')
+          h3 ~GoOd ViBeS~
+          h2
+            | Good morning
+            abbr(title='Mister') Mr.
+            |  Sunshine
+          h1
+            abbr(data-val= user)= message
+        #user-messages.messages(role='main')
+          form(action='127.0.0.1:8080', method='post')
+            p
+              | Want to send a
+              abbr(title='only POSITIVE messages, bitches') message
+              | ?
+            input(type='text', name='comment')
+            br
+            br
+            input#btnSubmit(type='button', value='Submit')

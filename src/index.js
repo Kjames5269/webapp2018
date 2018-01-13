@@ -3,17 +3,34 @@ const express = require('express');
 const DB = require('./database.js');
 
 var app = express();
+app.set('view engine', 'pug');
+
+
+function getRandomComp() {
+	return DB.getComplement().then((doc) => {
+		return doc[Math.floor(Math.random()*doc.length)];	
+	});
+}
 
 app.get('/', (req, res) => {
-	DB.getComplement().then((doc) => {
-		res.send(doc[Math.floor(Math.random()*doc.length)]);
+	getRandomComp().then((randomDoc) => {
+		res.render('index', { message: randomDoc.quote, user: randomDoc.user });
 	});
 });
 
 app.post('/', (req, res) => {
-	res.send("Meee too thank");
+	getRandomComp().then((randomDoc) => {
+		const sentMsg = req.body.message;
+		const sentUsr = req.body.user | 'anon';
+		res.render('thanks', { 
+					message: randomDoc.quote, 
+					user: randomDoc.user, 
+					sentMsg: sentMsg, 
+					sentUsr: sentUsr 
+				     });
+	});
 });
 
-app.listen(8081, () => {
-  console.log("Listening now on port 8081!");
+app.listen(8080, () => {
+  console.log("Listening now on port 8080!");
 });
