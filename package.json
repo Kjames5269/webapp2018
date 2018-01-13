@@ -23,7 +23,7 @@
     "bluebird": "^3.5.1",
     "create-react-app": "^1.4.3",
     "express": "^4.16.2",
-    "mongodb": "^3.0.1"
+    "mongodb": "^2.2.33"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
