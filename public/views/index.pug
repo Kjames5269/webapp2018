@@ -18,7 +18,7 @@ html(lang='en')
           h1
             abbr(data-val= user)= message
         #user-messages.messages(role='main')
-          form(action='127.0.0.1:8080', method='post')
+          form(action='http://127.0.0.1:8080', method='post')
             p
               | Want to send a 
               abbr(title='only POSITIVE messages, bitches') message
@@ -27,4 +27,4 @@ html(lang='en')
             input(type='text', name='user')
             br
             br
-            input#btnSubmit(type='button', value='Submit')
+            input#btnSubmit(type='submit', value='Submit')

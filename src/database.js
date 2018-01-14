@@ -35,9 +35,9 @@ export function getComplement() {
 
 export function insertInto(usr, complement) {
     return base((col) => {
-	return col.findOneAndUpadate.bind(col,
+	return col.insert.bind(col,
 	    { 
-	      "quote": complement,
+	      "_id": complement,
 	      "user": usr 
 	    },
 	    { "upsert": true }

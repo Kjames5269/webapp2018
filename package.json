@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Kjames5269/webapp2018#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
     "create-react-app": "^1.4.3",
     "express": "^4.16.2",
     "mongodb": "^2.2.33",
