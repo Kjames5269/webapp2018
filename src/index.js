@@ -4,7 +4,8 @@ const DB = require('./database.js');
 
 var app = express();
 app.set('view engine', 'pug');
-
+app.set('views', __dirname + '/../public/views');
+app.use(express.static(__dirname + '/../public'));
 
 function getRandomComp() {
 	return DB.getComplement().then((doc) => {
@@ -21,6 +22,9 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
 	getRandomComp().then((randomDoc) => {
 		const sentMsg = req.body.message;
+		if(sentMsg == null) {
+			res.send("No message given :(");
+		}
 		const sentUsr = req.body.user | 'anon';
 		res.render('thanks', { 
 					message: randomDoc.quote, 

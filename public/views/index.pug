@@ -12,7 +12,7 @@ html(lang='en')
         header(role='banner')
           h3 ~GoOd ViBeS~
           h2
-            | Good morning
+            | Good morning 
             abbr(title='Mister') Mr.
             |  Sunshine
           h1
@@ -20,10 +20,11 @@ html(lang='en')
         #user-messages.messages(role='main')
           form(action='127.0.0.1:8080', method='post')
             p
-              | Want to send a
+              | Want to send a 
               abbr(title='only POSITIVE messages, bitches') message
               | ?
             input(type='text', name='comment')
+            input(type='text', name='user')
             br
             br
             input#btnSubmit(type='button', value='Submit')
