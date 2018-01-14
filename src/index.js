@@ -11,7 +11,7 @@ app.use(BP.urlencoded({ extended: true }));
 
 function getRandomComp() {
 	return DB.getComplement().then((doc) => {
-		return doc[Math.floor(Math.random()*doc.length)];	
+		return doc[Math.floor(Math.random()*doc.length)];
 	});
 }
 
@@ -24,7 +24,10 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
 	getRandomComp().then((randomDoc) => {
 		var sentMsg = req.body.comment;
-		const sentUsr = (req.body.user) ? req.body.user : 'anon';
+		if(sentMsg.length > 90) {
+			sentMsg = sentMsg.substring(0,90);
+		}
+		const sentUsr = (req.body.user || req.body.user.length > 30 ) ? req.body.user : 'anon';
 
 		if(sentMsg.trim() == "") {
 			sentMsg = "No message given :(";
@@ -34,11 +37,11 @@ app.post('/', (req, res) => {
 				// pass
 			});
 		}
-		res.render('index', { 
-			message: sentMsg, //randomDoc._id, 
-			user: sentUsr, //randomDoc.user, 
-			sentMsg: sentMsg, 
-			sentUsr: sentUsr 
+		res.render('index', {
+			message: sentMsg, //randomDoc._id,
+			user: sentUsr, //randomDoc.user,
+			sentMsg: sentMsg,
+			sentUsr: sentUsr
 	   	});
 	});
 });
