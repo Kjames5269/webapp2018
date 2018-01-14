@@ -1,3 +1,282 @@
-h1 {
-	color: blue;
+abbr[title],
+acronym[title] {
+  border-bottom-width: 0;
 }
+html,
+body {
+  font-family: "ff-meta-web-pro", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  line-height: 26px;
+  background: #f6efe5;
+  background-size: 60%;
+  color: tomato;
+}
+/*
+==========================================================================
+Page wrapper
+==========================================================================
+*/
+.page-wrapper {
+  background-image: url('./forest.jpg');
+  position: relative;
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.intro {
+  overflow: hidden;
+}
+.intro header {
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  height: 50em;
+  float: left;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+  @media (max-width: 70em) {
+    .intro header {
+      background: rgba(241,90,48, .6);
+      width: 100%;
+      height: 27em;
+    }
+
+  }
+  @media (max-width: 53em) {
+    .intro header {
+      height: 20em;
+    }
+  }
+.intro header h2 {
+  position: absolute;
+  font-size: 150%;
+  line-height: 10em;
+  bottom: 7em;
+  left: -6em;
+  margin: 0;
+  padding: 1em;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0px 2px 2px blue;
+}
+.intro header h3 {
+  position: absolute;
+  font-size: 180%;
+  line-height: 1em;
+  top: 50px;
+  left: 12px;
+  width: 35%;
+  margin: 0;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0px 2px 2px blue;
+}
+
+.intro header h1 {
+  position: relative;
+  background: rgba(64,80,135, .95);
+  background-size: 101%;
+  float: right;
+  color: #ffffff;
+  font-size: 300%;
+  line-height: 1.25em;
+  width: 60%;
+  height: 20.019em;
+  margin: 0 0 0 0;
+  padding: 6em 0.5em 0 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+  @media (max-width: 70em) {
+      .intro header h1 {
+          background: rgba(64,80,135, .80);
+      }
+  }
+
+  @media (max-width: 70em) {
+    .intro header h2 {
+      background: rgba(13,44,64, .5);
+      width: 31em;
+      height: 11em;
+      left: -12em;
+      padding: 1em 0.5em 0 0.5em;
+      text-shadow: none;
+    }
+  }
+
+  @media (max-width: 70em) {
+      .intro header h3 {
+        width: 7.5em;
+        height: 11em;
+        left: calc(28% - 4em);
+        font-size: 200%;
+
+        padding: 1em 0.5em 0 0.5em;
+        padding-left: 2.5em;
+        text-indent: -1.5em;
+        text-shadow: none;
+        color: #330972;
+      }
+
+      .intro header h2 {
+          bottom: 13.5em;
+          padding-bottom: 0px;
+          height: 4em;
+          line-height: 1em;
+          left: -13.5em;
+      }
+  }
+
+  @media (max-width: 53em) {
+    .intro header h2 {
+      background-size: 20%;
+      font-size: 144%;
+      line-height: 144%;
+      text-align: center;
+      width: 40%;
+      height: 5em;
+      top: 9em;
+      left: 0em;
+      padding: 0px;
+      padding-top: 1em;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    }
+
+      .intro header h3 {
+        width: 7.5em;
+        height: 11em;
+        left: calc(22% - 4em);
+        font-size: 200%;
+
+        padding: 1em 0.5em 0 0.5em;
+        padding-left: 2.5em;
+        text-indent: -1.5em;
+      }
+
+      .intro header h1 {
+          font-size: 180%;
+      }
+
+  }
+
+    @media (max-width: 430px) {
+        .intro header h3 {
+            display: none;
+        }
+
+        .intro header h2 {
+            display: none;
+        }
+
+        .intro header h1 {
+            width: 100%;
+        }
+
+    }
+
+  .intro .messages {
+    font-size: 100%;
+    color: #ffffff;
+    width: 40%;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 101%;
+    height: 50em;
+    margin: 0;
+    padding: 16.3em 2em 10em 2em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+    @media (max-width: 70em) {
+      .intro .messages {
+        width: 100%;
+        height: auto;
+        padding: 2em 1em 37% 1em;
+      }
+
+    }
+  .intro .messages p {
+    padding: 0 40% .5em 0 ;
+    margin: 0;
+  }
+    @media (max-width: 70em) {
+      .intro .messages p {
+        padding: 0 0 .5em 0;
+      }
+    }
+    @media (max-width: 53em) {
+      .intro .messages p {
+        padding: 0 0 .5em 0;
+      }
+    }
+
+    @media (max-width: 70em) {
+        .intro header h1 {
+            padding-top: 2.5em;
+        }
+    }
+
+  #btnSubmit {
+      width: 10em ;
+      height: 3em;
+      margin-top: .5em;
+      background: tomato;
+      color: white ;
+      border: none;
+  }
+
+  .center {
+      width: 28em;
+      margin: auto;
+  }
+
+  .center input {
+      height: 2em;
+      font-size: 110%;
+      line-height: 110%;
+  }
+  .center p {
+      font-size: 110%;
+      line-height: 144%;
+      text-shadow: 2px 0px 2px #000;
+  }
+
+  @media (max-width: 430px) {
+      .center input {
+          display: block;
+      }
+      #btnSubmit {
+          margin-top: 0px;
+      }
+  }
+
+  h1:hover::after {
+      white-space: pre;
+      content: "\A From: " attr(data-val);
+      padding: -20px;
+  }
