@@ -279,5 +279,6 @@ Page wrapper
   h1:hover::after {
       white-space: pre;
       content: "\A From: " attr(data-val);
+      word-wrap: break-word;
       padding: -20px;
   }
