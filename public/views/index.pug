@@ -16,7 +16,7 @@ html(lang="en")
           form(action="http://127.0.0.1:8080" method="post")
             .center
               p Want to send a message?
-              input(type="text" name="comment" placeholder="Positive!")
-              input(type="text" name="user" placeholder="Name (optional)")
+              input(type="text" name="comment" maxlength="90" placeholder="Positive!")
+              input(type="text" name="user" maxlength="30" placeholder="Name (optional)")
               br
               input#btnSubmit(type="submit" value="Submit")
