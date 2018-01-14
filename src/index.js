@@ -32,9 +32,9 @@ app.post('/', (req, res) => {
 		if(sentMsg.trim() == "") {
 			sentMsg = "No message given :(";
 		}
-		else if(!sentUsr.contains('(') && !sentUsr.conatins(')')
-									   && !sentMsg.conatins('(')
-								   	   && !sentMsg.contains(')'))
+		else if(!sentUsr.includes('(') && !sentUsr.includes(')')
+									   && !sentMsg.includes('(')
+								   	   && !sentMsg.includes(')'))
 			{
 			DB.insertInto(sentUsr, sentMsg).catch((err) => {
 				// pass
